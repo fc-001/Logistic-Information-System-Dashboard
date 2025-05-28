@@ -2,7 +2,7 @@
 # 物流信息系统大作业
 
 ### 使用方法：
-1. 新建一个环境(本实验是Python3.10);
+1. 先配好新建一个环境(本实验是Python3.10)`conda create -n your_env_name python==3.10`;
 2. 在终端运行`conda activate your_env_name`;
 3. 在终端运行`pip install -r requirements.txt`;
 4. 安装好所有依赖后继续运行`python dashboard.py`;
