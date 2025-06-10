@@ -22,10 +22,7 @@ Find the string of numbers after "inet". For example, mine is 127.0.0.1, then ad
 7. Only see single pictures? Please refer to the files in `Notebook`.
 
 
-
-这是同济大学交通学院物流信息系统的大作业，这门课是交通运输专业大三的专业选修课。
-
-数据集`data.xlsx`由田宁老师提供。我们用`data_filter.py`进行了一些预处理，其他部分都写在Jupyter Notebook里。
+数据集`data.xlsx`。我们用`data_filter.py`进行了一些预处理，其他部分都写在Jupyter Notebook里。
 
 由于主要是做仪表盘进行可视化，因此我们注重功能的实现而非高超的算法和数据处理技术。首先在`hub2hub.ipynb`中，我们主要针对路线进行可视化，分为总仓到分仓，分仓之间和分仓到门店。
 其次是`operations_metrics.ipynb`里面，主要是发运量上的可视化，展现了一些运量、成本方面的指标。而最后的`inventory.ipynb`则是更多关注了库存管理的数据，我们假设期初库存为0进行了所有的可视化。EOQ和安全库存的公式可以在《供应链管理》的相关教科书或者网络资源中找到。
