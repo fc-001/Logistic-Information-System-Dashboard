@@ -31,11 +31,6 @@ Find the string of numbers after "inet". For example, mine is 127.0.0.1, then ad
 ### 仅供参考！
 
 
-
-This is a project example for the course: Logistic Information System at School of Transportation, Tongji University.
-
-The origin dataset `data.xlsx` is given by the lecturer, Prof. Ning Tian at Tongji University.
-
 The requirement is to design a dashboard that can effectively illustrate the sales data, which may provide some suggestions for company's operations management.
 
 All is coded in Python and shown in those $\textbf{Jupyter Notebooks}$, besides the data filtering process.

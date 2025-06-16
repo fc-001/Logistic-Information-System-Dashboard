@@ -152,7 +152,6 @@ fig.add_trace(go.Scatter(
     visible="legendonly"
 ), secondary_y=False)
 
-# 每日服务水平
 fig.add_trace(go.Scatter(
     x=daily_service_df["date"], y=daily_service_df["daily_rate"],
     mode="lines+markers", name="每日服务水平",
@@ -162,7 +161,6 @@ fig.add_trace(go.Scatter(
     visible="legendonly"
 ), secondary_y=True)
 
-#菜单
 fig.update_layout(
     updatemenus=[dict(
         type="dropdown", x=1.15, y=1.1,
