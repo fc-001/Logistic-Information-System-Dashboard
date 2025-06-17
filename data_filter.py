@@ -31,7 +31,7 @@ df_stores['store_name'] = df_stores['store_name'].str.strip()
 df_stores = df_stores.dropna(subset=['store_name','lat','lng']).drop_duplicates()
 df_stores.to_csv('stores.csv', index=False)
 
-# 3. 发运记录 - 总仓→分仓
+# 发运记录 总仓到分仓
 df_tot2sub = pd.read_excel(xls, sheet_name=3).rename(columns={
     'source':'source',
     'dest':'dest',
@@ -47,7 +47,7 @@ df_tot2sub['month'] = (df_tot2sub['month_code']
     .astype(int))
 df_tot2sub.to_csv('ship_tot2sub.csv', index=False)
 
-# 4. 发运记录 分仓→分仓
+# 分仓到分仓
 df_sub2sub = pd.read_excel(xls, sheet_name=4).rename(columns={
     '调出分仓':'source',
     '调入分仓':'dest',
@@ -65,7 +65,7 @@ df_sub2sub['month']  = (df_sub2sub['month_code']
     .astype(int))
 df_sub2sub.to_csv('ship_sub2sub.csv', index=False)
 
-# 5. 发运记录 分仓→门店
+# 分仓到门店
 df_sub2store = pd.read_excel(xls, sheet_name=5).rename(columns={
     '分仓名称':'source',
     '门店名称':'dest',
@@ -83,14 +83,14 @@ df_sub2store['month']  = (df_sub2store['month_code']
     .astype(int))
 df_sub2store.to_csv('ship_sub2store.csv', index=False)
 
-# 6. 参考运价率
+# 费率
 df_rates = pd.DataFrame([
     {'mode':'FTL','unit':'元/车·公里','rate_per_km':2.5},
     {'mode':'LTL','unit':'元/件·公里','rate_per_km':0.0055}
 ])
 df_rates.to_csv('rates.csv', index=False)
 
-# 7. 参考库存策略
+# 库存策略
 df8 = pd.read_excel(xls, sheet_name=7, header=None)
 df8[0] = df8[0].fillna('')
 holding_cost_pct = float(df8.iloc[1,1])
@@ -112,7 +112,7 @@ df_inv_params = pd.DataFrame([{
 }])
 df_inv_params.to_csv('inventory_policy.csv', index=False)
 
-# 8. 服务要求
+# 服务要求
 df_service = pd.read_excel(xls, sheet_name=8).rename(columns={
     '区域':'region',
     '平均时速（KM/HR)':'speed_kmph',
